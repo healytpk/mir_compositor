@@ -1,0 +1,2 @@
+rm -f compositor
+g++ -o compositor -I/usr/include/miral/ -I/usr/include/mircore/ *.cpp -lmiral -std=c++20 -ggdb3 -fsanitize=address,leak,undefined,pointer-compare,pointer-subtract,float-divide-by-zero,float-cast-overflow -fsanitize-address-use-after-scope -fcf-protection=full -fstack-protector-all -fstack-clash-protection -fvtv-debug -fvtv-counts -finstrument-functions -D_GLIBC_DEBUG -D_GLIBC_DEBUG_PEDANTIC -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC
